@@ -1,0 +1,10 @@
+{"name": "timezone",
+"engines": {
+"node": "12.16.3"
+},
+"scripts": {
+    "build": "cd client && npm install && npm build && cd..",
+    "deploy": "cp -a client/build/.public",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built yay!!"
+}
+}
